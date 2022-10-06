@@ -7,8 +7,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.19.2",
-    "chart.js": "^2.9.3",
+    "axios": "^0.21.3",
+    "chart.js": "^2.9.4",
     "classnames": "^2.2.6",
     "leaflet": "^1.6.0",
     "numeral": "^2.0.6",
@@ -17,14 +17,17 @@
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.7.0",
-    "react-scripts": "4.0.0"
+    "react-scripts": "5.0.0",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "react-scripts start", 
+    "start": "react-scripts start",
     "build": "CI=false && react-scripts build",
     "test": "react-scripts test --env=jsdom --passWithNoTests",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +43,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "snyk": true
 }
